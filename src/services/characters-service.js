@@ -1,6 +1,5 @@
-import { API_URL } from '../../constants';
-
-export const SET_CHARACTERS = 'SET_CHARACTERS';
+import { API_URL } from '../constants';
+import { setCharacters } from '../reducers/characters/actions';
 
 export function getCharacters() {
   return dispatch => {
@@ -10,12 +9,5 @@ export function getCharacters() {
     .then(characters => {
       dispatch(setCharacters(characters));
     });
-  };
-}
-
-export function setCharacters(characters) {
-  return {
-    type: SET_CHARACTERS,
-    characters
   };
 }

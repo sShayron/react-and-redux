@@ -10,11 +10,11 @@ const CharacterMovies = ({ movies }) =>
         </tr>
       </thead>
       <tbody>
-          {movies.map(movie => {
-              const dateArray = movie.release_date.split('-');
+        {movies.map(movie => {
+          const dateArray = movie.release_date.split('-');
 
-              return <tr key={movie.title}><td> {movie.title} ({dateArray[0]}) </td></tr>;
-          })}
+          return <tr key={movie.title}><td> {movie.title} ({dateArray[0]}) </td></tr>;
+        })}
       </tbody>
     </table>
   </div>;

@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {
-  setCurrentCharacter,
-  getCharacterProfile
-} from '../reducer/character/actions';
+import { getCharacterProfile } from '../services/character-service';
+import { setCurrentCharacter } from '../reducers/character/actions';
 
 const CharacterList = ({ characters, setCharacter }) =>
   <div id="character-list" className="col-md-12">
